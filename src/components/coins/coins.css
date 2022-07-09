@@ -5,7 +5,7 @@
   }
   
   body {
-    overflow: hidden;
+    overflow-x: hidden;
     padding: 0%;
     margin: 0%;
   }
@@ -102,9 +102,7 @@
     .cryptoHeader input {
       width: 100px;
     }
-    .App{
-      width: 100vw;
-    }
+   
     .buttons{
       margin-bottom: 1rem;
     }
