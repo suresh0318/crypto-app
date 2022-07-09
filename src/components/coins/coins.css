@@ -5,14 +5,14 @@
   }
   
   body {
-    scroll-behavior: auto;
+    overflow: hidden;
     padding: 0%;
     margin: 0%;
   }
   
   .cryptoHeader {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background-color: rgb(255, 196, 0);
     display: flex;
@@ -21,7 +21,6 @@
   }
   .cryptoHeader h1 {
     color: white;
-    cursor: pointer;
   }
   .cryptoHeader input {
     width: 50%;
@@ -38,7 +37,7 @@
   }
   
   .cryptoDisplay {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     padding-top: 150px;
@@ -54,7 +53,6 @@
     border-radius: 10px;
     margin: 20px;
     text-align: center;
-    cursor: pointer;
   }
   
   .coin img {
@@ -62,7 +60,7 @@
   }
   
   .buttons{
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,4 +77,35 @@
     border-radius: 5px;
     font-size: 15px;
   }
-  
+ .cryptoHeader img{
+  width: 150px;
+ }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width:768px){
+    
+    .cryptoHeader img{
+      width: 100px;
+     
+     }
+  .cryptoHeader{
+    width: 100%;
+  }
+    .coin{
+      width: 360px;
+      margin: 0.5rem;
+    }
+    .cryptoHeader input {
+      width: 100px;
+    }
+    .App{
+      width: 100vw;
+    }
+    .buttons{
+      margin-bottom: 1rem;
+    }
+  }

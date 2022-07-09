@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import Coin from "../coin/Coin";
 import Loader from "../loader/Loader";
-
+import ScrollToTop from "react-scroll-to-top";
 
 function Coins() {
   const [listOfCoins, setListOfCoins] = useState([]);
@@ -48,11 +48,19 @@ function Coins() {
 
   return (
     <div className="App">
+      <ScrollToTop smooth color="rgb(255, 196, 0)" />
       <div className="cryptoHeader">
+        <div className="logo">
+        <img
+          src="http://store-images.s-microsoft.com/image/apps.9133.14263488601983276.beb21534-542c-4a71-92dc-ab81cc3761d8.df9f32c2-b8c8-4215-b075-62ee89945905"
+          alt="logo"
+        />
         <h1>MyCrypto</h1>
+        </div>
+      
         <input
           type="text"
-          placeholder="search here..."
+          placeholder="search..."
           onChange={searchHandler}
         />
       </div>
@@ -62,7 +70,7 @@ function Coins() {
           <button onClick={profitCoinsHandler}>profitable today</button>
           <button onClick={lossCoinsHandler}>loss today</button>
         </div>
-        
+
         {isLoading ? (
           filtered.map((coin) => {
             return (
@@ -77,7 +85,7 @@ function Coins() {
             );
           })
         ) : (
-          < Loader />
+          <Loader />
         )}
       </div>
     </div>
@@ -85,5 +93,3 @@ function Coins() {
 }
 
 export default Coins;
-
-

@@ -1,4 +1,4 @@
-import './App.css';
+
 import Coins from "./components/coins/Coins"
 function App() {
   return (
